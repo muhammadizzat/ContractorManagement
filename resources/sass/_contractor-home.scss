@@ -1,0 +1,103 @@
+$defect-status-colors: (
+  open: #ff6600,
+  closed: #999999,
+  wip: #e7a900,
+  resolved: #009225,
+);
+
+#page-contractor-home {
+    .defects-list {
+        .defect-card {
+            .card-body {
+                .defect-status-section {
+                    font-size: 10pt;
+                    .defect-status {
+                        font-weight: bold;
+                        @each $status, $hex in $defect-status-colors {
+                            &.defect-status-#{$status}{
+                                color: $hex;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #defect-modal {
+        overflow: auto !important;
+    }
+    #assigned-defects-card {
+        overflow: hidden;
+        .project-header {
+            cursor: pointer;
+        }
+        .project-body {
+            background-color: #e0e2eb;
+            .filter-section {
+                background: #d4d5dd;
+                .defects-search {
+                    background: transparent;
+                    border: none;
+                    width: 100%;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+            .defects-list {
+                .defect-card {
+                    cursor: pointer;
+                    .defect-ref-no-section {
+                        display: flex;
+                        justify-content: center;
+                        align-content: center;
+                        flex-direction: column;
+                        .defect-ref-no {
+                            font-size: 12pt;
+                        }
+                    }
+                    .defect-info {
+                        .defect-title {
+                            font-size: 11.5pt;
+                            font-weight: bold;
+                        }
+                        .defect-case {
+                            font-size: 9pt;
+                            color: #8898aa;
+                        }
+                    }
+                    .defect-type {
+                        display: flex;
+                        justify-content: center;
+                        align-content: center;
+                        flex-direction: column;
+                    }
+                    .defect-status-section {
+                        font-size: 10pt;
+                        .defect-status-dropdown {
+                            font-weight: bold;
+                            @each $status, $hex in $defect-status-colors {
+                                &.defect-status-#{$status}{
+                                    color: $hex;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & > :last-child {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    }
+}
+
+#activity-image-modal {
+    .modal-body {
+        text-align: center;
+        .activity-image {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,115 @@
+// Fonts
+// @import url("https://fonts.googleapis.com/css?family=Roboto");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+// @import "~bootstrap/scss/bootstrap.scss";
+// @import "~bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css";
+@import "~bootstrap-select/dist/css/bootstrap-select.min.css";
+
+
+
+//font-awesome
+// @import "~@fortawesome/fontawesome-free/scss/fontawesome";
+// @import "~@fortawesome/fontawesome-free/scss/solid";
+
+// Datatables
+// @import'~datatables.net-dt/css/jquery.dataTables.min.css';
+
+// @import "~selectize-bootstrap4-theme/scss/selectize.bootstrap4";
+
+.bg-gradient-primary {
+  background: linear-gradient(87deg, #f26c57 0, #f25a69 100%) !important;
+}
+
+.text-primary {
+  color: #f26c57 !important;
+}
+
+.btn-primary {
+  border-color: #f25a69;
+  background-color: #f26c57;
+  &:hover {
+    border-color: #f25a69;
+    background-color: #f26c57;
+  }
+  &:focus,
+  &.focus {
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(242, 108, 87, 0.5);
+  }
+  &.disabled,
+  &:disabled {
+    border-color: #f25a69;
+    background-color: #f26c57;
+  }
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    border-color: #f25a69;
+    background-color: #f26c57;
+  }
+}
+
+.badge-white {
+    color: black;
+    background-color: white;
+}
+
+.l-space {
+    letter-spacing: 0.2em;
+}
+
+
+.dropdown-ellipsis
+{
+  margin: 0.9em auto;
+}
+
+
+
+.hover-image {
+    height: 12rem;
+    i.upload {
+        display: none;
+        margin-top: -7rem;
+        margin-bottom: 3.25rem;
+    }
+    .logo-media-img {
+        &:hover {
+            & + i.upload {
+                display: block;
+                z-index: 500;
+            }
+            opacity: 0.5;
+            z-index: 501;
+            cursor: pointer;
+        }
+        object-fit: cover;
+        width:10rem;
+        height:10rem;
+    }
+}
+
+.logo-media-icon {
+    object-fit:cover;
+    height: 36px;
+    width: 36px;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+@import "navbar";
+@import "datepicker";
+@import "datatable";
+@import "case";
+@import "unit-type";
+@import "contractor-home";
+@import "contractor";
+@import "project-dashboard";
+@import "project-thumbnails";
+@import "project-assignees";
+@import "notifications-page";

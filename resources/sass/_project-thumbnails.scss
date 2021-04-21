@@ -1,0 +1,89 @@
+#projects-page{
+    .project-card{
+        position: relative;
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+            width: 250px;
+        word-wrap: break-word;
+        border: 1px solid rgba(0, 0, 0, .05);
+        border-radius: .375rem;
+        background-color: #fff;
+        background-clip: border-box;
+    
+        margin-right: 15px;
+        margin-bottom: 10px;
+        margin-left: 15px;
+    }
+    
+    .project-list{
+        margin-left: 0px;
+    }
+    
+    #project-pagination{
+        float: right;
+        text-align: right;
+        padding-top: 0.25em;
+        font-size: 0.875rem;
+        color: #525f7f !important;
+        padding: 1.25rem 1.5rem;
+        box-sizing: border-box;
+    }
+    
+    .paginate_button{
+        box-sizing: border-box;
+        display: inline-block;
+        min-width: 1.5em;
+        padding: 0.5em 1em;
+        margin-left: 2px;
+        text-align: center;
+        text-decoration: none !important;
+        cursor: pointer;
+        border-radius: 50% !important;
+        margin: 0 3px;
+        background-color: #fff;
+        border: 1px solid #dee2e6 !important;
+    }
+    
+    .enabled:hover {
+      color: #000000 !important;
+      border: 1px solid #dee2e6 !important;
+      border-radius: 50% !important;
+      background: none;
+      background-color: #c4c4c4 !important;
+      box-shadow: none !important;
+    }
+    .project-current-page, .project-current-page:hover, .project-current-page:active {
+        color: #fff !important;
+        border-radius: 50% !important;
+        border: none !important;
+        background-color: #f26c57 !important;
+        background-image: none !important;
+        box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+        z-index: 1;
+    }
+    
+    #project-entries-info{
+        clear: both;
+        float: left;
+        padding-top: 0.755em;
+        padding: 1.25rem 1.5rem;
+        display: block;
+    }
+    
+    .project-search-filter{
+        margin-left: 0.5em;
+    }
+    .project-search-input{
+        font-size: 0.875rem;
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
+        padding: 0.25rem 0.5rem;
+        line-height: 1.5;
+        height: calc(1.5em + .5rem + 2px);
+    }
+
+    .card-img-top{
+        object-fit: cover;
+    }
+}

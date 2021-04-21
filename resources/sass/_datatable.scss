@@ -1,0 +1,264 @@
+// Datatables Styling
+/* Table */
+table.dataTable
+{
+  margin-bottom: 1.2em !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{
+    color: #fff !important;
+  }
+
+.table-responsive
+{
+  // padding-top: 1.5rem!important;
+}
+/* Table Button */
+div.dt-buttons
+{
+    float: right;
+    padding: 0rem 1.5rem 0.5em;
+}
+
+button.dt-button
+{
+    font-size: .75rem;
+    padding: .25rem .5rem;
+    color: #fff;
+    border-color: #f25a69;
+    background-color: #f26c57;
+    background-image: none;
+    border-radius: .375rem;
+    line-height: 1.5;
+}
+
+button.dt-button:hover
+{
+    border-color: #f25a69 !important;
+    background-color: #f26c57 !important;
+    background-image: none !important;
+}
+
+/*  Search Box */
+.dataTables_wrapper .dataTables_filter
+{
+    font-size: .875rem;
+    float: left !important;
+    padding: 0rem 1.5rem 0.5em;
+}
+
+.dataTables_wrapper .button-section {
+  float: right;
+  padding-right: 24px;
+}
+
+.dataTables_wrapper .dataTables_filter input
+{
+  font-size: .875rem;
+  border: 1px solid #dee2e6;
+  border-radius: .25rem;
+  padding: .25rem .5rem;
+  line-height: 1.5;
+  height: calc(1.5em + .5rem + 2px);
+}
+
+.dataTables_wrapper .dataTables_filter input:focus
+{
+  border: 1px solid #f26c57;
+  outline: none;
+}
+
+.dataTables_info, .dt-buttons, .dataTables_info, .dataTables_paginate
+{
+    padding: 1.25rem 1.5rem;
+}
+
+/* Pagination */
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:active
+{
+    color: #fff !important;
+    border-radius: 50% !important;
+    border: none !important;
+    background-color: #f26c57 !important;
+    background-image: none !important;
+    box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+    z-index: 1;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button:active
+{
+  color: #000000 !important;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 50% !important;
+  background: none;
+  background-color: #c4c4c4 !important;
+  box-shadow: none !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button
+{
+  color: #8898aa !important;
+  border: 1px solid #dee2e6;
+  border-radius: 50% !important;
+  margin: 0 3px;
+  background-color: #fff;
+  border: 1px solid #dee2e6 !important;
+}
+
+/* Bottom Info */
+.dataTables_info, .dataTables_paginate{
+  font-size: .875rem;
+  color: #525f7f !important;
+}
+
+/* Table Footer */
+table.dataTable.no-footer {
+  border-bottom: 1px solid #e8e8e8 !important;
+}
+
+// Datatables Styling
+// /* Table */
+// table.dataTable
+// {
+//   margin-bottom: 1.2em !important;
+// }
+// .table-responsive
+// {
+//   // padding-top: 1.5rem!important;
+// }
+// /* Table Button */
+// div.dt-buttons
+// {
+//     float: right;
+//     padding: 0rem 1.5rem 0.5em;
+// }
+
+// button.dt-button
+// {
+//     font-size: .75rem;
+//     padding: .25rem .5rem;
+//     color: #fff;
+//     border-color: #f25a69;
+//     background-color: #f26c57;
+//     background-image: none;
+//     border-radius: .375rem;
+//     line-height: 1.5;
+// }
+
+// button.dt-button:hover
+// {
+//     border-color: #f25a69 !important;
+//     background-color: #f26c57 !important;
+//     background-image: none !important;
+// }
+
+// /*  Search Box */
+// .dataTables_wrapper .dataTables_filter
+// {
+//     font-size: .875rem;
+//     float: left;
+//     padding: 0.5rem 1.5rem;
+// }
+
+// .button-section {
+//     float: right;
+//     margin: 0.5rem 1.5rem;
+//     &.btn-add {
+//         margin-right: 0.1rem;
+//     }
+//     &.btn-back {
+//         margin-right: 0.1rem;
+//     }
+//     &.btn-back-to-project{
+//         margin-right: 0.1rem;
+//     }
+//     &.btn-excel{
+//         margin-right: 0.1rem;
+//     }
+
+// }
+
+// // tooltip
+// .tooltip-inner {
+//     background-color: grey;
+// }
+// .bs-tooltip-auto[x-placement^=bottom] .arrow::before,
+// .bs-tooltip-bottom .arrow::before {
+//     border-bottom-color: grey !important;
+// }
+// .bs-tooltip-auto[x-placement^=top] .arrow::before,
+// .bs-tooltip-top .arrow::before {
+//     border-top-color: grey !important;
+// }
+// .bs-tooltip-auto[x-placement^=left] .arrow::before,
+// .bs-tooltip-left .arrow::before {
+//     border-left-color: grey !important;
+// }
+// .bs-tooltip-auto[x-placement^=right] .arrow::before,
+// .bs-tooltip-right .arrow::before {
+//     border-right-color: grey !important;
+// }
+
+// .dataTables_wrapper .dataTables_filter input {
+//   font-size: .875rem;
+//   border: 1px solid #dee2e6;
+//   border-radius: .25rem;
+//   padding: .25rem .5rem;
+//   line-height: 1.5;
+//   height: calc(1.5em + .5rem + 2px);
+// }
+
+// .dataTables_wrapper .dataTables_filter input:focus {
+//   border: 1px solid #f26c57;
+//   outline: none;
+// }
+
+// .dataTables_info, .dt-buttons, .dataTables_info, .dataTables_paginate {
+//     padding: 1.25rem 1.5rem;
+// }
+
+// /* Pagination */
+// .dataTables_wrapper .dataTables_paginate .paginate_button.current,
+// .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover,
+// .dataTables_wrapper .dataTables_paginate .paginate_button.current:active {
+//     color: #fff !important;
+//     border-radius: 50% !important;
+//     border: none !important;
+//     background-color: #f26c57 !important;
+//     background-image: none !important;
+//     box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+//     z-index: 1;
+// }
+
+// .dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+// .dataTables_wrapper .dataTables_paginate .paginate_button:active {
+//   color: #000000 !important;
+//   border: 1px solid #dee2e6 !important;
+//   border-radius: 50% !important;
+//   background: none;
+//   background-color: #c4c4c4 !important;
+//   box-shadow: none !important;
+// }
+
+// .dataTables_wrapper .dataTables_paginate .paginate_button {
+//   color: #8898aa !important;
+//   border: 1px solid #dee2e6;
+//   border-radius: 50% !important;
+//   margin: 0 3px;
+//   background-color: #fff;
+//   border: 1px solid #dee2e6 !important;
+// }
+
+// /* Bottom Info */
+// .dataTables_info, .dataTables_paginate {
+//   font-size: .875rem;
+//   color: #525f7f !important;
+// }
+
+// /* Table Footer */
+// table.dataTable.no-footer {
+//   border-bottom: 1px solid #e8e8e8;
+// }

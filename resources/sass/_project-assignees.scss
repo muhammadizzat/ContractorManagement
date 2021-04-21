@@ -1,0 +1,91 @@
+#page-project-assignees {
+    #options-section {
+        font-size: 11pt;
+        background: #e4e4e4;
+        height: 45px;
+        .no-to-show-option {
+            select {
+                border: 2px solid #cacaca;
+                border-radius: 5px;
+            }
+        }
+        .search {
+            input[type=search] { 
+                // color: red;  
+                // text-align: right;
+                cursor: pointer;
+                // display: block; 
+                // width: 100%; 
+                border: 2px solid #cacaca;
+                border-radius: 5px;
+                -webkit-appearance: none;
+                // letter-spacing: 4px;        
+                // text-shadow: 0 0 2px black;       
+                // word-spacing: 20px;
+                padding: 3px;   
+            }
+        }
+    }
+    #assignees-list {
+        .assignee-contractor-card {
+            overflow: hidden;
+            .no {
+                width: 40px;
+            }
+            .asgnd-con-card-body {
+                background-color: #eef0f6;
+                .defects-list {
+                    .defect-card {
+                        .defect-ref-no-section {
+                            display: flex;
+                            justify-content: center;
+                            align-content: center;
+                            flex-direction: column;
+                            .defect-ref-no {
+                                font-size: 12pt;
+                            }
+                        }
+                        .defect-info {
+                            .defect-title {
+                                font-size: 11.5pt;
+                                font-weight: bold;
+                            }
+                            .defect-case {
+                                font-size: 9pt;
+                                color: #8898aa;
+                            }
+                        }
+                        .defect-type {
+                            display: flex;
+                            justify-content: center;
+                            align-content: center;
+                            flex-direction: column;
+                        }
+                        .defect-status-section {
+                            font-size: 10pt;
+                            .defect-status {
+                                font-weight: bold;
+                                @each $status, $hex in $defect-status-colors {
+                                    &.defect-status-#{$status}{
+                                        color: $hex;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            & > :last-child {
+                // border-bottom-left-radius: 5px;
+                // border-bottom-right-radius: 5px;
+            }
+        }
+    }
+    #pagination-section {
+        font-size: 11pt;
+        background: #e4e4e4;
+        height: 45px;
+    }
+    
+}

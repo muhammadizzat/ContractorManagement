@@ -1,0 +1,38 @@
+#page-edit-unit-type {
+    #edit-unit-type-card {
+        .card-body {
+        }
+    }
+    #floors-list {
+        .floor-card {
+            background-color: rgba(9, 30, 66, 0.041);
+            border: none;
+            // border: 1px solid rgba(9, 30, 66, 0.137);
+            box-shadow: 0 2px 0 rgba(9, 30, 66, 0.089);
+        }
+        #add-floor-btn {
+            background-color: rgba(9, 30, 66, 0.109);
+            box-shadow: 0 2px 0 rgba(9, 30, 66, 0.089);
+            width: 100%;
+            color: #525f7fc4;
+        }
+    }
+}
+
+#view-floor-modal {
+    .floor-plan-img-holder {
+        img {
+            border-radius: 5px;
+            width: 100%;
+        }
+    }
+}
+
+#edit-floor-modal {
+    .floor-plan-img-holder {
+        img {
+            border-radius: 5px;
+            width: 100%;
+        }
+    }
+}

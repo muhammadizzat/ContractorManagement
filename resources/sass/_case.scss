@@ -1,0 +1,698 @@
+// Case Status
+$case-status-colors: (
+  open: #249b3e,
+  closed: #999999,
+);
+
+$defect-status-colors: (
+  open: #ff6600,
+  closed: #999999,
+  wip: #e7a900,
+  resolved: #009225,
+);
+
+#defect-status-btn {
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    @each $status, $hex in $defect-status-colors {
+        &.defect-status-#{$status}{
+            background-color: $hex;
+            border-color: $hex;
+        }
+    }
+}
+
+#defect-status-btn {
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    @each $status, $hex in $defect-status-colors {
+        &.defect-status-#{$status}{
+            background-color: $hex;
+            border-color: $hex;
+        }
+    }
+}
+
+.case-status-btn {
+    color: white;
+    text-transform: uppercase;
+    @each $status, $hex in $case-status-colors {
+        &.case-status-#{$status}{
+            background-color: $hex;
+            border-color: $hex;
+        }
+    }
+}
+
+#page-cases {
+    #cases {
+        .cases-title {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+.case-card {
+    .case-info-section {
+        .case-info-header {
+            padding-bottom: 7px;
+            .case-no {
+                font-size: 12pt;
+            }
+
+            .case-title {
+                font-size: 12pt;
+            }
+        }
+        .case-info-unit {
+            font-size: 10pt;
+            font-weight: 900;
+            padding-bottom: 25px;
+            color: #8898aa;
+        }
+        .case-info-item {
+            font-size: 11pt;
+            padding-bottom: 7px;
+            .info-name {
+                width: 130px;
+                font-weight: bold;
+            }
+
+            .info-value {
+            }
+        }
+    }
+
+    .case-status-section {
+        width: 170px;
+        .case-status {
+            width: 100%;
+            .case-status-btn {
+                color: white;
+                text-transform: uppercase;
+                @each $status, $hex in $case-status-colors {
+                    &.case-status-#{$status}{
+                        background-color: $hex;
+                        border-color: $hex;
+                    }
+                }
+            }
+        }
+
+        .case-defects-statistics {
+            font-size: 10pt;
+        }
+    }
+
+    .defects-header {
+        font-size: 10pt;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        #add-defect-btn{
+            cursor: pointer;
+        }
+    }
+    .defects-list {
+        .defect-card {
+            cursor: pointer;
+            .defect-ref-no-section {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-direction: column;
+                .defect-ref-no {
+                    font-size: 12pt;
+                }
+            }
+            .defect-info {
+                .defect-title {
+                    font-size: 11.5pt;
+                    font-weight: bold;
+                }
+                .defect-assigned-contractor {
+                    font-size: 9pt;
+                    color: #8898aa;
+                }
+            }
+            .defect-type {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-direction: column;
+            }
+            .defect-status-section {
+                font-size: 10pt;
+                .defect-status {
+                    font-weight: bold;
+                    @each $status, $hex in $defect-status-colors {
+                        &.defect-status-#{$status}{
+                            color: $hex;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#defect-modal {
+    overflow: auto !important;
+    .defect-info-loading {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.027);
+        /*dim the background*/
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        color:black;
+        text-align: center;
+        border-top-left-radius: .4375rem;
+        border-top-right-radius: .4375rem;
+
+        .loader {
+            color: #f26c57d2;
+        }
+    }
+    .defect-info-section {
+        .defect-info-header {
+            padding-bottom: 7px;
+            .defect-ref-no {
+                font-size: 12pt;
+            }
+
+            .defect-title {
+                font-size: 12pt;
+            }
+        }
+        .defect-info-unit {
+            font-size: 10pt;
+            font-weight: 900;
+            padding-bottom: 25px;
+            color: #8898aa;
+        }
+        .defect-info-item {
+            font-size: 11pt;
+            padding-bottom: 7px;
+            .info-name {
+                width: 130px;
+                font-weight: bold;
+            }
+
+            .info-value {
+                #edit-defect-tags-btn {
+                    border: 0px;
+                    box-shadow: none;
+                }
+                #extend-defect-due-date-btn {
+                    border: 0px;
+                    box-shadow: none;
+                }
+                input {
+                    height: 28px;
+                    padding: 3px;
+                }
+                select {
+                    height: 28px;
+                    padding: 3px;
+                }
+            }
+            
+        }
+        
+    }
+
+    .defect-status-section {
+        width: 170px;
+        .defect-status-dropdown {
+            width: 100%;
+            .status-btn {
+                text-transform: uppercase;
+            }
+        }
+
+        .additional-status-info-section {
+            font-size: 10pt;
+            .defect-info-card {
+                background-color: #0000000e;
+                border-radius: 5px;
+                .defect-ref-no {
+                    font-size: 9pt;
+                }
+
+            }
+        }
+    }
+
+    .tabs-header {
+        font-size: 10pt;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .tab-content {
+        #pills-activity {
+            .comment-images {
+                .view-comment-img-holder {
+                    position: relative;
+                    img {
+                        height: 100px;
+                        max-height: 100px;
+                        object-fit: contain;
+                        border-radius: 5px;
+                    }
+                    .img-options-overlay {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        max-width: 100px;
+                        max-height: 100px;
+                        border-radius: 5px;
+                        background-color: rgba(41, 41, 41, 0.644);
+                        opacity: 0;
+                        transition: .3s ease;
+                        .options-container {
+                            height: 100%;
+                            .option-btn {
+                                color: white;
+                                background-color: #00000000;
+                                border: none; 
+                            }
+                        }
+                    }
+
+                    &:hover .img-options-overlay {
+                        opacity: 1;
+                    }
+                }
+    
+                .add-image-btn {
+                    min-width: 100px;
+                    min-height: 100px;
+                    background-color: #0000000a;
+                    font-size: 20pt;
+                        color: #b4babe;
+                }
+            }
+            .activity-add-comment-section {
+                font-size: 10pt;
+                background-color: #f8f9fe;
+                .commenter-name {
+                    font-size: 8pt;
+                }
+        
+                .comment-images-input {
+                    .comment-img-holder {
+                        position: relative;
+                        img {
+                            max-width: 100px;
+                            max-height: 100px;
+                            object-fit: contain;
+                            border-radius: 5px;
+                        }
+
+                        .img-options-overlay {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 5px;
+                            background-color: rgba(41, 41, 41, 0.644);
+                            opacity: 0;
+                            transition: .3s ease;
+                            .options-container {
+                                height: 100%;
+                                .option-btn {
+                                    color: white;
+                                    background-color: #00000000;
+                                    border: none; 
+                                }
+                            }
+                        }
+    
+                        &:hover .img-options-overlay {
+                            opacity: 1;
+                        }
+                    }
+        
+                    .add-image-btn {
+                        min-width: 100px;
+                        min-height: 100px;
+                        background-color: #0000000a;
+                        font-size: 20pt;
+                        color: #b4babe;
+                    }
+                    #comment-image-file-input {
+                        visibility: hidden;
+                        width: 0;
+                        height: 0;
+                    }
+                }
+        
+                #comment-textarea {
+                    font-size: 10pt;
+                }
+            }
+
+            .activity-list-loading {
+                text-align: center;
+        
+                .loader {
+                    color: #f26c57d2;
+                }
+            }
+        
+            .activity-list {
+                background-color: #f8f9fe;
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+        
+                font-size: 10pt;
+                overflow-y: scroll; max-height:900px;
+                &::-webkit-scrollbar {
+                    width: 6px;
+                    background-color: transparent;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: #a5a5a5;
+                    border-radius: 3px;
+                }
+                &::-webkit-scrollbar-track {
+                    // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+                    background-color: transparent;
+                }
+        
+                .activity-comment {
+                    .commenter-profile-pic {
+                        img {
+                            max-width: 40px;
+                            max-height: 40px;
+                        }
+                    }
+                    .commenter {
+        
+                    }
+                    .comment {
+                        font-size: 10pt;
+                        white-space: pre-wrap;
+                    }
+                    .comment-images {
+                        .view-comment-img-holder {
+                            img {
+                                max-width: 100px;
+                                max-height: 100px;
+                                object-fit: contain;
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+        
+                    .comment-date {
+        
+                    }
+                }
+        
+                .activity-update {
+                    .updater-user-name {
+        
+                    }
+        
+                    .update {
+        
+                    }
+        
+                    .update-date-time {
+                    }
+                }
+
+                .activity-request {
+                    background-color: #fff89f;
+                    .requester-icon-section {
+                        .requester-icon {
+                            font-size: 13pt;
+                            color: white;
+                            background-color: #0000002d;
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+
+                    .request-type-section {
+                        // font-size: 10pt;
+                        font-family: Open Sans, sans-serif;
+                        font-weight: bold;
+                        white-space: pre-wrap;
+                    }
+                    .request-reason-section {
+                        font-size: 10pt;
+                        white-space: pre-wrap;
+                    }
+                    .request-response-section {
+                        border-width: 1px;
+                        border-color: #0000001a;
+                        background-color: #0000001a;
+                        border-radius: 5px;
+                        .approve-btn {
+                            color: white;
+                            border-color: #87c591;
+                            background-color: #6ef257;
+                        }
+                    }
+                }
+            }
+        }
+        #pills-description {
+            #editor-custom-btn-container {
+                position: absolute;
+                right: 0px;
+            }
+            .ql-toolbar {
+                border: none;
+            }
+            #description-editor {
+                border: none;
+            }
+        }
+        #pills-location {
+            #floor-plan-menu {
+                height: 40px;
+                #floor-select-input {
+                    height: 30px;
+                }
+            }
+            #floor-plan-img-container {
+                position: relative;
+                height: 100% ;
+                overflow: hidden;
+                .defect-location-pin {
+                    background-color: rgb(255, 94, 94);
+                    text-align: center;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 10pt;
+                    border-radius: 50%;
+                }
+                #floor-plan-image {
+                    width: 100%;
+                }
+                // .btn-container {
+                //     position: absolute;
+                //     right: 0px;
+                // }
+            }
+            #floor-plan-control-panel {
+                #floor-plan-pins-menu {
+                    width: 200px;
+                    background: #f5f4f4;
+                    border-radius: 5px;
+
+                    .pin-list {
+                        .pin-entry {
+                            padding-bottom: 2px;
+                            font-size: 10.5pt;
+                            background-color: #eeeded;
+                            border-radius: 5px;
+
+                            &.selected {
+                                background-color: #ebb5b5;
+                            }
+
+                            .pin-no {
+                                color: white;
+                                background-color: rgb(255, 94, 94);
+                                border-radius: 50%;
+                                height: 20px;
+                                width: 20px;
+                                display: inline-block;
+                                text-align: center;
+                                font-weight: bold;
+                                font-size: 10pt;
+
+                                cursor: pointer;
+
+                                &.no-location {
+                                    background-color: rgb(149, 149, 149);
+                                }
+                            }
+                            .pin-label {
+                                word-wrap: break-word;
+                                width: 102px;
+                                .view {
+    
+                                }
+                                .edit-label-input {
+                                    width:100px;
+                                }
+                            }
+                            .options-section {
+                                
+                            }
+                        }
+                    }
+                    .add-pin-btn {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        #pills-images {
+            #defect-images-container {
+                .defect-img-holder {
+                    position: relative;
+                    img {
+                        height: 100px;
+                        max-height: 100px;
+                        object-fit: contain;
+                        border-radius: 5px;
+                    }
+                    .img-options-overlay {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 5px;
+                        background-color: rgba(41, 41, 41, 0.644);
+                        opacity: 0;
+                        transition: .3s ease;
+                        .options-container {
+                            height: 100%;
+                            .option-btn {
+                                color: white;
+                                background-color: #00000000;
+                                border: none; 
+                            }
+                        }
+                    }
+
+                    &:hover .img-options-overlay {
+                        opacity: 1;
+                    }
+                }
+    
+                .add-image-btn {
+                    min-width: 100px;
+                    min-height: 100px;
+                    background-color: #0000000a;
+                    font-size: 20pt;
+                        color: #b4babe;
+                }
+            }
+            #add-defect-image-section {
+                background-color: #d4d4d4;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+#activity-image-modal {
+    .modal-body {
+        text-align: center;
+        .activity-image {
+            width: 100%;
+        }
+    }
+}
+
+#defect-image-modal {
+    .modal-body {
+        text-align: center;
+        .defect-image {
+            width: 100%;
+        }
+    }
+}
+
+.ql-editor {
+    font-family: "Open Sans", sans-serif;
+    strong {
+        font-weight: bold;
+    }
+}
+
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.loader {
+  color: #ffffff;
+  font-size: 10px;
+  margin: 80px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loader:before {
+  left: -2.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 2.5em;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+
+.invalid-text{
+    color: #fb6340;
+}
+
